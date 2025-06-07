@@ -8,7 +8,7 @@ screen=pygame.display.set_mode((800,500))
 pygame.display.set_caption("Ping Bong Game")
 
 #Loading Images
-icon=pygame.image.load('img/icon.png')
+icon=pygame.image.load('img/Icon.png')
 pygame.display.set_icon(icon)
 background=pygame.image.load('img/background.png')
 player=pygame.image.load('img/Panel.png')
@@ -68,7 +68,7 @@ def deflection():
         hypotenuse=math.sqrt((left_collision_point[0]-third_point[0])**2+(left_collision_point[1]-third_point[1])**2)
 
     if right_collision_point[0]>0 and right_collision_point[1]>0:#Right Wall
-        opposite=right_collision_point+abs(BallY_Change)
+        opposite=right_collision_point[1]+abs(BallY_Change)
         third_point=[opposite,adj]
         hypotenuse=math.sqrt((right_collision_point[0]-third_point[0])**2+(right_collision_point[1]-third_point[1])**2)
     #Determining the angle
